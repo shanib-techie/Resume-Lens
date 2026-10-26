@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap"><link rel="stylesheet" href="/css/style.css"><title>Check resume - ResumeLens</title></head><body><nav><b>ResumeLens</b><div><a href="/" class="H">Home</a><a href="/check-resume" class="on">Check resume</a><a href="/about" class="A">About</a></div></nav>
+<main><h1>Check resume</h1>
+<div class="card"><b>1. Upload resumes</b>
+<label class="drop" id="drop" for="file">Drop PDF, DOCX or ZIP files here, or click to choose<input id="file" type="file" accept=".pdf,.docx,.zip" multiple hidden></label>
+<p class="mute" id="fileInfo"></p></div>
+<div class="card"><b>2. Choose skills</b>
+<div class="box"><input type="text" id="q" placeholder="Search a skill or field, e.g. data, graphic, tally. Press Enter to add your own" autocomplete="off"><div class="sugg" id="sugg" hidden></div></div>
+<div class="chips" id="picked"></div>
+<p class="mute" id="browseHead">Or browse by field</p><div class="groups" id="groups"></div><div class="chips" id="groupSkills"></div></div>
+<div class="card"><b>3. Minimum match</b>
+<p class="mute">Resumes at or above this score are shortlisted. Only they go into the download zip.</p>
+<div class="row" style="justify-content:flex-start"><input type="range" id="thrR" min="0" max="100" value="70" style="width:260px"><b><span id="thrV">70</span>%</b></div></div>
+<button class="btn" id="go">Check resume</button> <span id="status" class="mute"></span>
+<div id="results"></div></main>
+<footer>ResumeLens</footer><script src="/js/script.js"></script></body></html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About - ResumeLens</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#F4F5FB;color:#1B1F3B;font:16px/1.6 system-ui,Arial,sans-serif}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6vw}
+  nav a{margin-left:20px;text-decoration:none;color:#5E6384}
+  nav a:hover,nav a.on{color:#5B3DF5}
+  main{max-width:900px;margin:0 auto;padding:10px 20px 50px}
+  h1{font-size:2.4rem;margin:.3em 0}
+  h2{margin-top:0}
+  .card{background:#fff;border:1px solid #DDE0F0;border-radius:14px;padding:22px;margin:18px 0}
+  .mute{color:#5E6384}
+  a{color:#5B3DF5}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 16px}
+  .tags span{background:#ECE8FF;color:#5B3DF5;border-radius:99px;padding:4px 13px;font-size:.88rem}
+  footer{text-align:center;color:#5E6384;padding:30px}
+  @media(prefers-color-scheme:dark){
+    body{background:#12142A;color:#ECEEFF}
+    .card{background:#1C1F3D;border-color:#2E3260}
+    .mute,nav a,footer{color:#9EA3C9}
+    a,nav a:hover,nav a.on{color:#8B76FF}
+    .tags span{background:#2B2660;color:#8B76FF}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <b>ResumeLens</b>
+  <div>
+    <a href="/">Home</a>
+    <a href="/check-resume">Check resume</a>
+    <a href="/about" class="on">About</a>
+  </div>
+</nav>
+
+<main>
+  <h1>About</h1>
+
+  <!-- PART 1: ABOUT ME -->
+  <div class="card">
+    <h2>1. About me</h2>
+    <p>I'm <b>Shanib Khan</b>, a B.Sc. (Hons.) Computer Science student who likes solving real problems with data. I learn by building projects: cleaning data, exploring it, training machine learning models and turning the results into dashboards and web apps.</p>
+    <p class="mute">Interests: Data Analytics, Data Science, Machine Learning, Business Intelligence, SQL and Data Visualization.</p>
+
+    <b>What I work with</b>
+    <div class="tags">
+      <span>Python</span><span>C++</span><span>SQL</span><span>MySQL</span><span>MongoDB</span>
+      <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Excel</span><span>Power BI</span>
+      <span>Scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>Git</span><span>GitHub</span>
+    </div>
+
+    <b>My projects</b>
+    <ul>
+      <li><a href="https://heart-checker.onrender.com/" target="_blank" rel="noopener"><b>Heart Risk Predictor</b></a>:
+        enter 23 health details and a LightGBM model estimates the chance of heart disease. I compared 4 models and LightGBM scored best (about 90% accuracy). Educational project, not a medical diagnosis.
+        <a href="https://github.com/shanib-techie/Heart-Risk-Predictor" target="_blank" rel="noopener">Code</a></li>
+      <li><a href="https://buy-or-not-buy-predictor.onrender.com/" target="_blank" rel="noopener"><b>Buy or Not Buy Predictor</b></a>:
+        a machine learning web app that predicts whether a buying decision will go ahead.</li>
+      <li><a href="https://github.com/shanib-techie/ResumeLens" target="_blank" rel="noopener"><b>ResumeLens</b></a>:
+        this site. It checks resumes against a skill list and shortlists the best ones.</li>
+    </ul>
+
+    <b>Find me</b>
+    <p>
+      <a href="https://github.com/shanib-techie" target="_blank" rel="noopener">GitHub</a> &nbsp;
+      <a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;
+      <a href="https://shanibkhan.netlify.app/" target="_blank" rel="noopener">Portfolio</a>
+    </p>
+  </div>
+
+  <!-- PART 2: WHAT IS USED IN THIS PROJECT -->
+  <div class="card">
+    <h2>2. What is used in this project</h2>
+    <p>ResumeLens compares resumes (PDF, DOCX, or a ZIP of many) with a skill list and shows a keyword match score. It is a keyword check, not a real ATS.</p>
+
+    <b>Backend</b>
+    <div class="tags">
+      <span>Python</span><span>FastAPI</span><span>Uvicorn</span><span>PyPDF2</span>
+      <span>python-docx</span><span>python-multipart</span><span>zipfile</span><span>difflib</span>
+    </div>
+
+    <b>Frontend</b>
+    <div class="tags">
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+    </div>
+
+    <b>How it works</b>
+    <ul>
+      <li>Search from 690+ skills in 25 fields, or type your own skill.</li>
+      <li>The backend reads each resume and looks for every skill, including short forms and small spelling mistakes.</li>
+      <li>Match % = skills found / skills chosen x 100.</li>
+      <li>Resumes at or above your minimum match go into the download zip.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>ResumeLens</footer>
+</body>
+</html>
