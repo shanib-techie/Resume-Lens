@@ -114,7 +114,7 @@ $("go").onclick = async () => {
     const res = await fetch(API + "/api/analyze", { method: "POST", body: fd });
     if (!res.ok) throw new Error((await res.json()).detail || "Request failed");
     lastResults = (await res.json()).results; render(lastResults); $("status").textContent = "";
-  } catch (e) { $("status").textContent = e instanceof TypeError ? NO_SERVER : e.message; $("status").className = "err"; }
+  } catch (e) {   console.error("Analyze failed:", e);   $("status").textContent = e.message || "Request failed";   $("status").className = "err"; }
   $("go").disabled = false;
 };
 
